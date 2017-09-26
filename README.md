@@ -84,9 +84,7 @@ You can't:
 
 ## Submitting Your Code
 
-You must email your changes as a git patch to jobs@omise.co. Your patch must
-consist of multiple separate commits, per exercise. Your commit
-message must communicate clearly what has been done in each commit. Have a look
+Your commit message must communicate clearly what has been done in each commit. Have a look
 at previous commits to have a clear idea of what we expect.
 
 If you notice more bugs in the original implementation you can add fixes for
