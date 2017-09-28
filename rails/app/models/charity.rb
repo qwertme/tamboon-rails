@@ -3,6 +3,6 @@ class Charity < ActiveRecord::Base
 
   def credit_amount(amount)
     new_total = total + amount
-    update_attribute :total, new_total
+    update_attributes({:total => new_total})
   end
 end
