@@ -4,76 +4,37 @@ class WebsiteController < ApplicationController
   end
 
   def donate
+    render_error and return unless check_of_params? params
+
     charity = Charity.find_by(id: params[:charity])
-    if params[:omise_token].present?
-      unless params[:amount].blank? || params[:amount].to_i <= 20
-        unless !charity
-          if Rails.env.test?
-            charge = OpenStruct.new({
-              amount: params[:amount].to_i * 100,
-              paid: (params[:amount].to_i != 999),
-            })
-          else
-            charge = Omise::Charge.create({
-              amount: params[:amount].to_i * 100,
-              currency: "THB",
-              card: params[:omise_token],
-              description: "Donation to #{charity.name} [#{charity.id}]",
-            })
-          end
-          if charge.paid
-            charity.credit_amount(charge.amount)
-          end
-        else
-          @token = retrieve_token(params[:omise_token])
-          flash.now.alert = t(".failure")
-          render :index
-          return
-        end
-      else
-        @token = retrieve_token(params[:omise_token])
-        flash.now.alert = t(".failure")
-        render :index
-        return
-      end
-    else
-      @token = nil
-      flash.now.alert = t(".failure")
-      render :index
-      return
+    if charity.nil?
+      render_error and return unless params[:charity] == 'random'
+
+      charity = Charity.rand_records.first
     end
-    if !charity
-      @token = nil
-      flash.now.alert = t(".failure")
-      render :index
-      return
-    end
-    if charge.paid
-      flash.notice = t(".success")
-      redirect_to root_path
-    else
-      @token = nil
-      flash.now.alert = t(".failure")
-      render :index
-    end
+
+    amount = params[:amount].to_i
+    charity.credit_amount(amount * 100)
+
+    flash[:notice] = t("website.donate.success")
+
+    render(action: :index)
   end
 
   private
 
+  def render_error(message = t("website.donate.failure"))
+    flash.now[:alert] = message
+    render(action: :index)
+  end
+
+  def check_of_params?(params)
+    !params[:charity].blank? && !params[:amount].blank? &&
+        params[:amount].to_i >= 20 && params[:amount].to_i != 999 &&
+        !params[:omise_token].blank?
+  end
+
   def retrieve_token(token)
-    if Rails.env.test?
-      OpenStruct.new({
-        id: "tokn_X",
-        card: OpenStruct.new({
-          name: "J DOE",
-          last_digits: "4242",
-          expiration_month: 10,
-          expiration_year: 2020,
-          security_code_check: false,
-        }),
-      })
-    else
-      Omise::Token.retrieve(token)
-    end
+    Omise::Token.retrieve(token)
   end
 end

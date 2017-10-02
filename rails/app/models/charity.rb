@@ -6,4 +6,7 @@ class Charity < ActiveRecord::Base
     new_total = model.total + amount
     update_attributes({:total => new_total})
   end
+
+  # For mysql we need to use RAND()
+  scope :rand_records, -> (limit = 1) {limit(limit).order("RANDOM()")}
 end
