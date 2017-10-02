@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8235ac73-8fb1-441c-b019-f0d1724bfb60" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/tamboon-rails.iml" afterPath="$PROJECT_DIR$/.idea/tamboon-rails.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/rails/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/app/controllers/website_controller.rb" afterPath="$PROJECT_DIR$/rails/app/controllers/website_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/app/models/charity.rb" afterPath="$PROJECT_DIR$/rails/app/models/charity.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rails/config/environments/test.rb" afterPath="$PROJECT_DIR$/rails/config/environments/test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -23,12 +18,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="website_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="website_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rails/app/controllers/website_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+            <state relative-caret-position="570">
+              <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="315">
+                <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -37,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/rails/app/models/charity.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="70" lean-forward="true" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+              <caret line="10" column="70" lean-forward="false" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -160,6 +168,7 @@
         <option value="$PROJECT_DIR$/rails/log/development.log" />
         <option value="$PROJECT_DIR$/rails/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/rails/app/controllers/website_controller.rb" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -956,12 +965,12 @@
       <updated>1506600706855</updated>
       <workItem from="1506600709057" duration="5827000" />
       <workItem from="1506689105502" duration="5289000" />
-      <workItem from="1506833234999" duration="4042000" />
+      <workItem from="1506833234999" duration="4552000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15158000" />
+    <option name="totallyTimeSpent" value="15668000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -1000,16 +1009,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/db/migrate/20151217071629_devise_create_users.rb" />
     <entry file="file://$PROJECT_DIR$/app/controllers/website_controller.rb" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rails/test/models/user_test.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1355,16 +1354,27 @@
     <entry file="file://$PROJECT_DIR$/rails/app/models/charity.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="70" lean-forward="true" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+          <caret line="10" column="70" lean-forward="false" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rails/app/controllers/website_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        <state relative-caret-position="570">
+          <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="315">
+            <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

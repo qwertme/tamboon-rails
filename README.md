@@ -12,6 +12,14 @@ back to us.
 
 ## Setup
 
+Install docker and docker-compose
+
+Then run `docker-compose build` to build docker from Dockerfiles in project. In the next 
+step you need to create database `docker-compose run --rm rails rake db:create db:migrate`
+For test env. you can run `docker-compose run --rm rails sh -c "RAILS_ENV=test rake db:create db:migrate"`
+
+To run  the tests you can use that command `docker-compose exec rails sh -c "RAILS_ENV=test rake test"`
+
 This app provides a way for merit makers to donate money to a charity of their
 choosing using their credit card.
 
